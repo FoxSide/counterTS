@@ -1,0 +1,17 @@
+.button {
+    border: 2px solid;
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    box-shadow: 3px 3px 10px;
+}
+
+.button:disabled {
+    background-color: azure;
+    box-shadow: none;
+}

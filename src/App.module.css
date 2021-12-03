@@ -1,0 +1,9 @@
+.appWrap {
+    margin: 50px auto;
+    width: 300px;
+    height: 220px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: darkgray;
+    box-shadow: 5px 5px 15px ;
+}
