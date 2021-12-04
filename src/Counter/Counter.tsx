@@ -17,8 +17,8 @@ export const Counter = ({count, callBackAdd, callBackReset}: PropsType) => {
         <div className={count === 5 ? s.red : ''}>{count}</div>
       </div>
       <div className={s.buttons}>
-        <Button title={'Inc'} count={count} callBack={callBackAdd} value={count === 5}/>
-        <Button title={'Set'} count={count} callBack={callBackReset} value={count === 0}/>
+        <Button title={'inc'} count={count} callBack={callBackAdd} value={count === 5}/>
+        <Button title={'set'} count={count} callBack={callBackReset} value={count === 0}/>
       </div>
     </>
   );
