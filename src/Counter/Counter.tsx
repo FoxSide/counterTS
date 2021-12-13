@@ -4,21 +4,23 @@ import {Button} from "./Button/Button";
 
 
 type PropsType = {
+  maxValue: number
+  minValue: number
   count: number
-  callBackAdd: (count: number) => void
-  callBackReset: (count: number) => void
+  callBackAdd: () => void
+  callBackReset: () => void
 }
 
-export const Counter = ({count, callBackAdd, callBackReset}: PropsType) => {
+export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue}: PropsType) => {
 
   return (
     <>
       <div className={s.screen}>
-        <div className={count === 5 ? s.red : ''}>{count}</div>
+        <div className={count === maxValue ? s.red : ''}>{count}</div>
       </div>
       <div className={s.buttons}>
-        <Button title={'inc'} count={count} callBack={callBackAdd} value={count === 5}/>
-        <Button title={'set'} count={count} callBack={callBackReset} value={count === 0}/>
+        <Button title={'inc'} callBack={callBackAdd} value={count === maxValue}/>
+        <Button title={'reset'} callBack={callBackReset} value={count === minValue}/>
       </div>
     </>
   );

@@ -1,9 +1,14 @@
-.appWrap {
-    margin: 50px auto;
+.body {
+    margin: 50px ;
     width: 300px;
     height: 220px;
     border: 2px solid;
     border-radius: 10px;
     background-color: darkgray;
     box-shadow: 5px 5px 15px ;
+}
+
+.appWrapp {
+    display: flex;
+    justify-content: center;
 }

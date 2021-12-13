@@ -3,14 +3,13 @@ import s from './Button.module.css';
 
 type PropsType = {
   title: string
-  count: number
-  callBack: (count: number) => void
+  callBack: () => void
   value: boolean
 }
 export const Button = (props: PropsType) => {
 
   const onClickHandler = () => {
-    props.callBack(props.count)
+    props.callBack()
   }
 
   return (
