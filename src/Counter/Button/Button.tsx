@@ -8,9 +8,7 @@ type PropsType = {
 }
 export const Button = (props: PropsType) => {
 
-  const onClickHandler = () => {
-    props.callBack()
-  }
+  const onClickHandler = () => props.callBack()
 
   return (
       <button disabled={props.value} className={s.button} onClick={onClickHandler}>{props.title}</button>
