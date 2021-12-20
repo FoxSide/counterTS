@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './App.module.css';
 import {Counter} from "./Counter/Counter";
 import {SetValue} from "./Counter/SetValue/SetValue";
@@ -8,6 +8,13 @@ function App() {
   const [maxValue, setmaxValue] = useState(5)
   const [count, setCount] = useState(minValue)
 
+  useEffect(() => {
+    let startCountAtStr = localStorage.getItem('minValue')
+    if (startCountAtStr) {
+      let startCount = JSON.parse(startCountAtStr)
+      setCount(startCount)
+    }
+  },[])
 
   const addCount = () => {
     if (minValue < maxValue) {
@@ -22,6 +29,8 @@ function App() {
     setMinValue(minValue)
     setmaxValue(maxValue)
     setCount(minValue)
+    localStorage.setItem('minValue', JSON.stringify(minValue))
+    localStorage.setItem('maxValue', JSON.stringify(maxValue))
   }
 
 
