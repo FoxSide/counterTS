@@ -1,6 +1,4 @@
-
 .screen {
-    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,8 +9,12 @@
     border-radius: 10px;
     background-color: orange;
 }
+.count {
+    font-size: 40px;
+}
+
 .red {
-    font-size: 45px;
+    font-size: 40px;
     color: red;
 }
 

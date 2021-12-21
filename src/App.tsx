@@ -8,13 +8,21 @@ function App() {
   const [maxValue, setmaxValue] = useState(5)
   const [count, setCount] = useState(minValue)
 
+
+
   useEffect(() => {
-    let startCountAtStr = localStorage.getItem('minValue')
-    if (startCountAtStr) {
-      let startCount = JSON.parse(startCountAtStr)
-      setCount(startCount)
+    let MinValueAsStr = localStorage.getItem('minValue')
+    let MaxValueAsStr = localStorage.getItem('maxValue')
+    if (MinValueAsStr) {
+      let newMinValue = JSON.parse(MinValueAsStr)
+      setMinValue(newMinValue)
     }
-  },[])
+    if (MaxValueAsStr) {
+      let newMaxValue = JSON.parse(MaxValueAsStr)
+      setmaxValue(newMaxValue)
+    }
+    setCount(minValue)
+  }, [minValue])
 
   const addCount = () => {
     if (minValue < maxValue) {
@@ -32,6 +40,8 @@ function App() {
     localStorage.setItem('minValue', JSON.stringify(minValue))
     localStorage.setItem('maxValue', JSON.stringify(maxValue))
   }
+
+
 
 
   return (

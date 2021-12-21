@@ -16,7 +16,7 @@ export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue}:
   return (
     <>
       <div className={s.screen}>
-        <div className={count === maxValue ? s.red : ''}>{count}</div>
+        <div className={count === maxValue ? s.red : s.count}>{count}</div>
       </div>
       <div className={s.buttons}>
         <Button title={'inc'} callBack={callBackAdd} value={count === maxValue}/>

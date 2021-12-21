@@ -31,7 +31,6 @@ export const SetValue = (props: PropsType) => {
   }
   const callBackHandler = () => {
     props.newValue(minValue, maxValue)
-
   }
 
   const Error =  minValue >= maxValue || minValue < 0 || maxValue < 0
