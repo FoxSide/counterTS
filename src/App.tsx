@@ -7,6 +7,7 @@ function App() {
   const [minValue, setMinValue] = useState(0)
   const [maxValue, setmaxValue] = useState(5)
   const [count, setCount] = useState(minValue)
+  const [changeScreen, setChangeScreen] = useState(true)
 
 
 
@@ -37,20 +38,22 @@ function App() {
     setMinValue(minValue)
     setmaxValue(maxValue)
     setCount(minValue)
+    setChangeScreen(false)
     localStorage.setItem('minValue', JSON.stringify(minValue))
     localStorage.setItem('maxValue', JSON.stringify(maxValue))
   }
-
-
+const callbackChangeScreen = () => {
+  setChangeScreen(true)
+}
 
 
   return (
     <div className={s.appWrapp}>
       <div className={s.body}>
-        <SetValue newValue={newValue}/>
+        <SetValue callbackChangeScreen={callbackChangeScreen} newValue={newValue}/>
       </div>
       <div className={s.body}>
-        <Counter minValue={minValue} maxValue={maxValue} count={count} callBackAdd={addCount} callBackReset={resetCount}/>
+        <Counter changeScreen={changeScreen} minValue={minValue} maxValue={maxValue} count={count} callBackAdd={addCount} callBackReset={resetCount}/>
       </div>
     </div>
   );

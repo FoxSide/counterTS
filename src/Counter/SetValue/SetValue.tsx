@@ -4,6 +4,7 @@ import {Button} from "../Button/Button";
 
 type PropsType = {
   newValue: (minValue: number, maxValue: number) => void
+  callbackChangeScreen: () => void
 }
 
 export const SetValue = (props: PropsType) => {
@@ -25,21 +26,27 @@ export const SetValue = (props: PropsType) => {
 
   const onChangeMinHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setMinValue(+e.currentTarget.value)
+    props.callbackChangeScreen()
   }
   const onChangeMaxHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setmaxValue(+e.currentTarget.value)
+    props.callbackChangeScreen()
   }
   const callBackHandler = () => {
     props.newValue(minValue, maxValue)
   }
 
-  const Error =  minValue >= maxValue || minValue < 0 || maxValue < 0
+  const Error = minValue >= maxValue || minValue < 0 || maxValue < 0
 
   return (
     <div>
       <div className={s.inpScreen}>
-        <div className={s.item}>Start Value :<input onChange={onChangeMinHandler} className={minValue < 0 || minValue > maxValue ? s.errorInp : s.inp} type="number" value={minValue}/></div>
-        <div className={s.item}>Max Value :<input onChange={onChangeMaxHandler} className={maxValue < 0 ? s.errorInp : s.inp} type="number" value={maxValue}/></div>
+        <div className={s.item}>Start Value :<input onChange={onChangeMinHandler}
+                                                    className={minValue < 0 || minValue >= maxValue ? s.errorInp : s.inp}
+                                                    type="number" value={minValue}/></div>
+        <div className={s.item}>Max Value :<input onChange={onChangeMaxHandler}
+                                                  className={maxValue < 0 || minValue >= maxValue ? s.errorInp : s.inp}
+                                                  type="number" value={maxValue}/></div>
       </div>
       <div className={s.buttonBody}>
         <Button title={'set'} callBack={callBackHandler} value={Error}/>
