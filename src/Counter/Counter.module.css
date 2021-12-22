@@ -33,3 +33,9 @@
     font-size: 19px;
     font-weight: bold;
 }
+
+.error {
+    font-size: 19px;
+    font-weight: bold;
+    color: red
+}

@@ -8,6 +8,7 @@ function App() {
   const [maxValue, setmaxValue] = useState(5)
   const [count, setCount] = useState(minValue)
   const [changeScreen, setChangeScreen] = useState(true)
+  const [error, setError] = useState(false)
 
 
 
@@ -45,15 +46,18 @@ function App() {
 const callbackChangeScreen = () => {
   setChangeScreen(true)
 }
+const callbackError = (change: boolean) => {
+    setError(change)
+}
 
 
   return (
     <div className={s.appWrapp}>
       <div className={s.body}>
-        <SetValue callbackChangeScreen={callbackChangeScreen} newValue={newValue}/>
+        <SetValue callbackError={callbackError} callbackChangeScreen={callbackChangeScreen} newValue={newValue}/>
       </div>
       <div className={s.body}>
-        <Counter changeScreen={changeScreen} minValue={minValue} maxValue={maxValue} count={count} callBackAdd={addCount} callBackReset={resetCount}/>
+        <Counter error={error} changeScreen={changeScreen} minValue={minValue} maxValue={maxValue} count={count} callBackAdd={addCount} callBackReset={resetCount}/>
       </div>
     </div>
   );

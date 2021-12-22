@@ -10,16 +10,27 @@ type PropsType = {
   callBackAdd: () => void
   callBackReset: () => void
   changeScreen: boolean
+  error: boolean
 }
 
-export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue, changeScreen}: PropsType) => {
+export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue, changeScreen, error}: PropsType) => {
+
+  let screenItem = () => {
+    if (error) {
+      return <div className={s.error}>Incorrect value!</div>
+    }
+    if (changeScreen) {
+      return <div className={s.text}>Enter values and press 'set'</div>
+    }
+    else {
+      return <div className={count === maxValue ? s.red : s.count}>{count}</div>
+    }
+  }
 
   return (
     <>
       <div className={s.screen}>
-        {changeScreen
-          ? <div className={s.text}>Enter value and press 'set'</div>
-          : <div className={count === maxValue ? s.red : s.count}>{count}</div>}
+        {screenItem()}
       </div>
       <div className={s.buttons}>
         <Button title={'inc'} callBack={callBackAdd} value={count === maxValue || changeScreen}/>
@@ -28,6 +39,3 @@ export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue, 
     </>
   );
 }
-
-// <div className={s.text}>Enter value and press 'set'</div>
-// <div className={count === maxValue ? s.red : s.count}>{count}</div>

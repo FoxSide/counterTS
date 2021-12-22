@@ -5,6 +5,7 @@ import {Button} from "../Button/Button";
 type PropsType = {
   newValue: (minValue: number, maxValue: number) => void
   callbackChangeScreen: () => void
+  callbackError: (change: boolean) => void
 }
 
 export const SetValue = (props: PropsType) => {
@@ -37,6 +38,7 @@ export const SetValue = (props: PropsType) => {
   }
 
   const Error = minValue >= maxValue || minValue < 0 || maxValue < 0
+  Error ? props.callbackError(true) : props.callbackError(false)
 
   return (
     <div>
