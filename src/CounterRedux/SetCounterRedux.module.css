@@ -1,0 +1,51 @@
+.inpScreen {
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 90px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.inp {
+    border: 2px solid;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: orange;
+    font-size: 20px;
+    outline: none
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px;
+    font-weight: bold;
+}
+
+.buttonBody {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.errorInp {
+    border: 2px solid red;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: pink;
+    font-size: 20px;
+    outline: none;
+}

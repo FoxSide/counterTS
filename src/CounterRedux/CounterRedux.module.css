@@ -1,0 +1,41 @@
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 250px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: orange;
+}
+.count {
+    font-size: 40px;
+}
+
+.red {
+    font-size: 40px;
+    color: red;
+}
+
+.buttons {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.text {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.error {
+    font-size: 19px;
+    font-weight: bold;
+    color: red
+}

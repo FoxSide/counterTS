@@ -21,8 +21,7 @@ export const Counter = ({count, callBackAdd, callBackReset, maxValue, minValue, 
     }
     if (changeScreen) {
       return <div className={s.text}>Enter values and press 'set'</div>
-    }
-    else {
+    } else {
       return <div className={count === maxValue ? s.red : s.count}>{count}</div>
     }
   }
