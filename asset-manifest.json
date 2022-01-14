@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/counterTS/static/css/main.2bff56a3.chunk.css",
+    "main.css": "/counterTS/static/css/main.203a8f04.chunk.css",
     "main.js": "/counterTS/static/js/main.2cfebd56.chunk.js",
     "main.js.map": "/counterTS/static/js/main.2cfebd56.chunk.js.map",
     "runtime-main.js": "/counterTS/static/js/runtime-main.fc553afa.js",
@@ -10,13 +10,14 @@
     "static/js/3.6733ad4b.chunk.js": "/counterTS/static/js/3.6733ad4b.chunk.js",
     "static/js/3.6733ad4b.chunk.js.map": "/counterTS/static/js/3.6733ad4b.chunk.js.map",
     "index.html": "/counterTS/index.html",
-    "static/css/main.2bff56a3.chunk.css.map": "/counterTS/static/css/main.2bff56a3.chunk.css.map",
-    "static/js/2.aae4f189.chunk.js.LICENSE.txt": "/counterTS/static/js/2.aae4f189.chunk.js.LICENSE.txt"
+    "static/css/main.203a8f04.chunk.css.map": "/counterTS/static/css/main.203a8f04.chunk.css.map",
+    "static/js/2.aae4f189.chunk.js.LICENSE.txt": "/counterTS/static/js/2.aae4f189.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/counterTS/static/media/logo.5abb2dcd.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fc553afa.js",
     "static/js/2.aae4f189.chunk.js",
-    "static/css/main.2bff56a3.chunk.css",
+    "static/css/main.203a8f04.chunk.css",
     "static/js/main.2cfebd56.chunk.js"
   ]
 }
