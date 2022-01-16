@@ -33,7 +33,7 @@ type DisabledSetAC = {
 
 let initialState: SetCounterStateType = {
   minValue: 0,
-  maxValue: 4,
+  maxValue: 5,
   error: false,
   showStartText: true,
   disabledSet: false
